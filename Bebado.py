@@ -61,7 +61,7 @@ def distmedia(n,x,xmax,ymax,tipo):
 @jit
 def grafico(n,step,x,xmax,ymax,tipo=1):
     '''Faz um gráfico de 'número de passos'X'distância média percorrida'.\nn=> número de passos final.\
-\nstep=> passos para ir de 0 até n.\
+\nstep=> passos para ir de 0 até n. Ex: n=1 será 1,2,3,4,5... e n=2 será 1,3,5,7...\
 \nx=> número de séries para cada passo.\
 \nxmax e ymax=> delimitadores do campo no qual o bêbado anda.'''
     medias=[]
@@ -77,7 +77,7 @@ def grafico(n,step,x,xmax,ymax,tipo=1):
     plt.xlabel('n')
     plt.ylabel('Distância')
     plt.show()
-    return medias,n_lista
+    #return medias,n_lista
 
 @jit
 def scatter(n,x,xmax,ymax,tipo=2):
